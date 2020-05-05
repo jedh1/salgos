@@ -1,0 +1,19 @@
+{% extends 'backtesting/base.html' %}
+{% block title %} Strategy Results: {{ ticker }} {% endblock %}
+
+{% block body_block %}
+{% load static %}
+<div class="ml-3">
+<p>
+<h2>Strategy Results</h2>
+<p>
+
+<br>
+Ticker: {{ ticker }}<br>
+Fast moving average: {{ fsma }}<br>
+Slow moving average: {{ ssma }}<br>
+Sharpe ratio: {{ sr }}<br>
+
+</div>
+{{ div | safe }}
+{% endblock %}

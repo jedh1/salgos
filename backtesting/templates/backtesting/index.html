@@ -1,0 +1,44 @@
+{% extends 'backtesting/base.html' %}
+{% block title %} Home - Stock Backtesting {% endblock %}
+
+{% block body_block %}
+{% load static %}
+{% load crispy_forms_tags %}
+<div class="ml-3">
+<br>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li class="{{ message.tags }}" style="color:red;">{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<h2>Backtest: Simple Moving Average Crossover</h2>
+<form method="post">
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="form-group col-md-3 mb-0">
+            {{ form.ticker|as_crispy_field }}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3 mb-0">
+            {{ form.start_date|as_crispy_field }}
+        </div>
+        <div class="form-group col-md-3 mb-0">
+            {{ form.end_date|as_crispy_field }}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3 mb-0">
+            {{ form.sma_fast|as_crispy_field }}
+        </div>
+        <div class="form-group col-md-3 mb-0">
+            {{ form.sma_slow|as_crispy_field }}
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Start!</button>
+</form>
+</div>
+
+{% endblock %}

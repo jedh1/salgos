@@ -1,0 +1,12 @@
+{% extends 'backtesting/base.html' %}
+{% block title %} About {% endblock %}
+
+{% block body_block %}
+{% load static %}
+<div class="ml-3">
+<br>
+<h2>About</h2>
+<p>This program searches the Quandl database for stocks with up to 10 years of data. The simple moving average (SMA) crossover strategy is implemented. The Sharpe ratio is calculated and output.<p>
+<p>In general, a Sharpe ratio above 2.0 is good, 1.0 is acceptable, and below 1.0 is not optimal. The S&P 500 index has a Sharpe ratio of about 0.5 for a 10-year period. For more information on Sharpe ratio, <a href="https://www.investopedia.com/terms/s/sharperatio.asp">click here.</a><p>
+
+{% endblock %}
