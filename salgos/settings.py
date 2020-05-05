@@ -12,16 +12,15 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import dj_database_url
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'mea_!(*sby9=b6+bz8c09mp%#e+qk+74vm3f^fk#ivtt5ohr@r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
